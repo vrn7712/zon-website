@@ -298,8 +298,8 @@ export function ZonLandingPage() {
     <div ref={containerRef} className="bg-[#E1D9C5] text-[#050505] min-h-screen font-sans selection:bg-[#FF4D00] selection:text-white overflow-x-hidden relative cursor-none">
 
       {/* Custom Cursor */}
-      <div className="custom-cursor fixed top-0 left-0 w-4 h-4 bg-[#FF4D00] rounded-full pointer-events-none z-[9999] mix-blend-exclusion"></div>
-      <div className="custom-cursor-ring fixed top-0 left-0 w-10 h-10 border border-[#FF4D00] rounded-full pointer-events-none z-[9998] mix-blend-exclusion opacity-50"></div>
+      <div className="custom-cursor fixed top-0 left-0 w-4 h-4 bg-[#FF4D00] rounded-full pointer-events-none z-[9999] mix-blend-exclusion hidden md:block"></div>
+      <div className="custom-cursor-ring fixed top-0 left-0 w-10 h-10 border border-[#FF4D00] rounded-full pointer-events-none z-[9998] mix-blend-exclusion opacity-50 hidden md:block"></div>
 
       {/* Noise Texture Overlay */}
       <div className="fixed inset-0 pointer-events-none opacity-[0.03] z-[100] mix-blend-multiply bg-[url('https://grainy-gradients.vercel.app/noise.svg')]"></div>
@@ -363,7 +363,7 @@ export function ZonLandingPage() {
 
           {/* Main Title */}
           <div className="relative mb-8 p-4 md:p-12">
-            <h1 className="text-[22vw] leading-[0.75] font-extrabold tracking-tighter font-display uppercase text-black mix-blend-normal whitespace-nowrap drop-shadow-[4px_4px_0px_rgba(255,77,0,0.2)]">
+            <h1 className="text-[20vw] md:text-[22vw] leading-[0.75] font-extrabold tracking-tighter font-display uppercase text-black mix-blend-normal whitespace-nowrap drop-shadow-[4px_4px_0px_rgba(255,77,0,0.2)]">
               {['Z', 'O', 'N'].map((char, i) => (
                 <span key={i} className="char-reveal inline-block hover:text-[#FF4D00] transition-colors duration-300 cursor-default transform hover:-translate-y-4 hover:rotate-3">{char}</span>
               ))}
@@ -436,7 +436,7 @@ export function ZonLandingPage() {
         <div className="absolute top-0 left-0 w-full h-full bg-[radial-gradient(circle_at_center,_rgba(255,77,0,0.1)_0%,_transparent_50%)]"></div>
         <div className="absolute bottom-10 left-10 text-xs font-mono opacity-30">SCROLL TO READ</div>
 
-        <div className="narrative-track flex items-center pl-[20vw] pr-[20vw] gap-12 md:gap-24 w-max">
+        <div className="narrative-track flex items-center pl-[10vw] pr-[10vw] md:pl-[20vw] md:pr-[20vw] gap-12 md:gap-24 w-max">
 
           <div className="narrative-item flex items-center gap-6">
             <span className="text-6xl md:text-9xl font-black font-display uppercase tracking-tight whitespace-nowrap">Build Your Zone</span>
@@ -459,8 +459,8 @@ export function ZonLandingPage() {
           <div className="narrative-item flex items-center gap-6">
             <div className="w-px h-32 bg-[#FF4D00]/50"></div>
             <span className="text-6xl md:text-9xl font-black font-display uppercase tracking-tight text-[#FF4D00] whitespace-nowrap">the world stops</span>
-            <div className="w-24 h-24 border-4 border-white rounded-full flex items-center justify-center">
-              <div className="w-16 h-16 bg-white rounded-full"></div>
+            <div className="w-16 h-16 md:w-24 md:h-24 border-4 border-white rounded-full flex items-center justify-center">
+              <div className="w-12 h-12 md:w-16 md:h-16 bg-white rounded-full"></div>
             </div>
           </div>
 
@@ -540,10 +540,10 @@ export function ZonLandingPage() {
 
         <div className="races flex h-full items-center pl-10 md:pl-32 bg-[radial-gradient(circle_at_center,_#333_1px,_transparent_1px)] bg-[length:20px_20px] w-max">
           <div className="min-w-[40vw] pr-20 relative">
-            <h2 className="text-8xl md:text-[10rem] font-black font-display leading-none text-white mix-blend-difference">
+            <h2 className="text-6xl md:text-[10rem] font-black font-display leading-none text-white mix-blend-difference">
               THE<br /><span className="text-[#FF4D00]">ZON</span> KIT
             </h2>
-            <div className="w-24 h-24 bg-[#FF4D00] rounded-full absolute -top-10 -right-10 flex items-center justify-center animate-spin-slow">
+            <div className="w-16 h-16 md:w-24 md:h-24 bg-[#FF4D00] rounded-full absolute -top-4 -right-4 md:-top-10 md:-right-10 flex items-center justify-center animate-spin-slow">
               <Layout size={40} fill="white" className="text-white" />
             </div>
           </div>
@@ -558,7 +558,7 @@ export function ZonLandingPage() {
             { title: "Tasks", icon: ListTodo, desc: "Add tasks to your list according to priority.", color: "#E1D9C5" },
             { title: "Customization", icon: Palette, desc: "Customize the Appearance of the app all you want.", color: "#E1D9C5" },
           ].map((feature, i) => (
-            <div key={i} className="feature-card w-[300px] md:w-[400px] flex-shrink-0 aspect-[3/4] bg-[#111] border border-[#333] rounded-3xl p-8 mr-12 flex flex-col justify-between relative overflow-hidden group hover:border-[#FF4D00] transition-colors shadow-2xl">
+            <div key={i} className="feature-card w-[85vw] md:w-[400px] flex-shrink-0 aspect-[3/4] bg-[#111] border border-[#333] rounded-3xl p-8 mr-6 md:mr-12 flex flex-col justify-between relative overflow-hidden group hover:border-[#FF4D00] transition-colors shadow-2xl">
               {/* Skeuomorphic inner shadow/highlight */}
               <div className="absolute inset-0 bg-gradient-to-br from-white/5 to-transparent pointer-events-none"></div>
               <div className="absolute inset-0 shadow-[inset_0_0_20px_rgba(0,0,0,0.8)] pointer-events-none rounded-3xl"></div>
@@ -666,7 +666,7 @@ export function ZonLandingPage() {
             {/* Decoration */}
             <div className="absolute top-0 left-0 w-full h-2 bg-gradient-to-r from-transparent via-[#FF4D00] to-transparent opacity-80"></div>
 
-            <h2 className="text-[5rem] md:text-[8rem] font-black font-display leading-[0.85] tracking-tighter mb-8 mix-blend-overlay text-white">
+            <h2 className="text-[3rem] md:text-[8rem] font-black font-display leading-[0.9] tracking-tighter mb-8 mix-blend-overlay text-white">
               START<br />NOW
             </h2>
 

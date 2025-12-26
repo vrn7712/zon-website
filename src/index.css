@@ -6,10 +6,17 @@
 @layer base {
   body {
     @apply antialiased;
-    cursor: none;
+  }
+
+  @media (hover: hover) and (pointer: fine) {
+    body {
+      cursor: none;
+    }
   }
 }
 
-* {
-  cursor: none !important;
+@media (hover: hover) and (pointer: fine) {
+  * {
+    cursor: none !important;
+  }
 }
