@@ -313,7 +313,7 @@ export function ZonLandingPage() {
           ))}
         </div>
         <button
-          onClick={(e) => e.preventDefault()}
+          onClick={() => window.open('https://github.com/vrn7712/Zon/releases', '_blank')}
           className="px-6 py-2 rounded-full border border-[#E1D9C5] bg-[#E1D9C5] text-black font-bold text-sm hover:bg-[#FF4D00] hover:border-[#FF4D00] hover:text-white hover:scale-105 transition-all uppercase tracking-widest shadow-[4px_4px_0px_0px_rgba(255,255,255,0.5)] active:translate-y-1 active:shadow-none cursor-pointer"
         >
           Get App
@@ -358,7 +358,7 @@ export function ZonLandingPage() {
           {/* Tagline - Fixed position to avoid overlap */}
           <div className="absolute -top-24 left-1/2 -translate-x-1/2 flex items-center gap-2 px-4 py-1 rounded-full border border-black/20 bg-white/30 backdrop-blur-md text-xs font-bold uppercase tracking-widest animate-fade-in-up z-30">
             <span className="w-2 h-2 rounded-full bg-[#FF4D00] animate-pulse"></span>
-            <span>Version Alpha Now Available</span>
+            <span>Version 1.0.0 Flow Now Available</span>
           </div>
 
           {/* Main Title */}
@@ -672,7 +672,7 @@ export function ZonLandingPage() {
 
             <div className="flex flex-col md:flex-row gap-6 justify-center items-center mt-12 relative z-20">
               <button
-                onClick={(e) => e.preventDefault()}
+                onClick={() => window.open('https://github.com/vrn7712/Zon/releases', '_blank')}
                 className="group relative px-12 py-6 bg-[#FF4D00] text-white text-xl rounded-2xl font-black uppercase tracking-wide hover:scale-105 transition-all shadow-[0_0_40px_rgba(255,77,0,0.4)] overflow-hidden cursor-pointer"
               >
                 <div className="absolute inset-0 bg-white opacity-0 group-hover:opacity-30 transition-opacity"></div>
@@ -681,13 +681,13 @@ export function ZonLandingPage() {
                 </span>
               </button>
 
-              <button onClick={(e) => e.preventDefault()} className="px-12 py-6 border-2 border-[#E1D9C5]/30 text-[#E1D9C5] text-xl rounded-2xl font-bold uppercase tracking-wide hover:bg-[#FF4D00] hover:text-white hover:border-[#FF4D00] transition-all cursor-pointer">
+              <button onClick={() => window.open('https://github.com/vrn7712/Zon', '_blank')} className="px-12 py-6 border-2 border-[#E1D9C5]/30 text-[#E1D9C5] text-xl rounded-2xl font-bold uppercase tracking-wide hover:bg-[#FF4D00] hover:text-white hover:border-[#FF4D00] transition-all cursor-pointer">
                 GitHub Repo
               </button>
             </div>
 
             <div className="mt-16 pt-8 border-t border-white/10 flex justify-between items-center text-sm font-mono opacity-40">
-              <span>V Alpha</span>
+              <span>V1.0.0 Flow</span>
               <span>OPEN SOURCE</span>
               <span>GPL-3.0 LICENSE</span>
             </div>
